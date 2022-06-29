@@ -1,0 +1,16 @@
+<html>
+  <script src="./libs/three.js"></script>
+  <script src="./libs/WorkerPool.js"></script>
+  <script src="./libs/ktx-parse.umd.js"></script>
+  <script src="./libs/KTX2Loader.js"></script>
+  
+  <body></body>
+
+  <script>
+    const gl = new THREE.WebGLRenderer();
+    const ktx2Loader = new THREE.KTX2Loader();
+    ktx2Loader.setTranscoderPath('./libs/basis/');
+    ktx2Loader.detectSupport(gl);
+    ktx2Loader.load('./sample.basis', t => { });
+  </script>
+</html>
